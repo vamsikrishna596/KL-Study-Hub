@@ -20,14 +20,4 @@ It includes **Notes, Previous Year Question Papers, Assignments, and Updates** f
 
 ---
 
-## 🛠️ Built With
-
-- **HTML5**
-- **CSS3**
-- **JavaScript**
-- **GitHub Pages**
-
----
-
-## 📂 Project Structure
 
