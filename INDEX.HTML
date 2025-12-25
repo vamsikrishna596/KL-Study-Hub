@@ -4,32 +4,144 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KL Study Hub</title>
+
 <style>
-  body { font-family: Arial, sans-serif; margin:0; background:#f5f5f5; }
-  header { background:#0048b0; color:#fff; padding:20px; text-align:center; }
-  nav { background:#062e6e; padding:10px; text-align:center; position:sticky; top:0; }
-  nav a {
-    color:white; margin:0 15px; text-decoration:none; font-weight:bold;
-    padding:5px 10px; display:inline-block;
-  }
-  section { padding:40px 20px; }
-  .banner { padding:50px; text-align:center; background:#e3f1ff; }
-  .container { display:flex; flex-wrap:wrap; justify-content:center; padding:20px; }
-  .card {
-    background:white; width:270px; margin:15px; padding:20px; text-align:center;
-    border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.2); transition:.3s;
-  }
-  .card:hover { transform:scale(1.05); }
-  .box { background:white; width:80%; margin:10px auto; padding:20px; border-radius:8px;
-         box-shadow:0 0 8px #ccc; }
-  form { background:white; width:80%; margin:20px auto; padding:20px;
-         border-radius:8px; box-shadow:0 0 10px #bbb; }
-  input, textarea {
-    width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:5px;
-  }
-  footer { background:#0e1b40; color:white; text-align:center; padding:15px; }
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+
+body{
+  font-family:Arial, sans-serif;
+  margin:0;
+  background:#f4f6fb;
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(90deg,#0048b0,#007bff);
+  color:white;
+  padding:25px;
+  text-align:center;
+}
+
+/* NAVBAR */
+nav{
+  background:#062e6e;
+  padding:10px;
+  text-align:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+nav a{
+  color:white;
+  margin:0 10px;
+  text-decoration:none;
+  font-weight:bold;
+  padding:8px 12px;
+  border-radius:5px;
+}
+nav a:hover{
+  background:#007bff;
+}
+
+/* SECTIONS */
+section{
+  padding:40px 15px;
+}
+
+/* BANNER */
+.banner{
+  background:#e3f1ff;
+  text-align:center;
+  padding:60px 20px;
+}
+
+/* CARDS */
+.container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  padding:20px;
+}
+.card{
+  background:white;
+  width:260px;
+  margin:15px;
+  padding:25px;
+  text-align:center;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,.15);
+  transition:.3s;
+}
+.card:hover{
+  transform:translateY(-8px);
+}
+.card a{
+  display:inline-block;
+  margin-top:10px;
+  background:#0048b0;
+  color:white;
+  padding:8px 15px;
+  border-radius:6px;
+  text-decoration:none;
+}
+
+/* BOX */
+.box{
+  background:white;
+  max-width:800px;
+  margin:12px auto;
+  padding:18px;
+  border-radius:8px;
+  box-shadow:0 0 10px rgba(0,0,0,.1);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.box a{
+  background:#007bff;
+  color:white;
+  padding:6px 14px;
+  border-radius:5px;
+  text-decoration:none;
+}
+
+/* FORM */
+form{
+  background:white;
+  max-width:600px;
+  margin:auto;
+  padding:25px;
+  border-radius:10px;
+  box-shadow:0 0 10px #bbb;
+}
+input,textarea{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  border:1px solid #ccc;
+  border-radius:5px;
+}
+
+/* FOOTER */
+footer{
+  background:#0e1b40;
+  color:white;
+  text-align:center;
+  padding:15px;
+  margin-top:20px;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  nav a{display:inline-block;margin:5px;}
+  .box{flex-direction:column;align-items:flex-start;}
+  .box a{margin-top:8px;}
+}
 </style>
 </head>
+
 <body>
 
 <header>
@@ -45,65 +157,74 @@
   <a href="#contact">Contact</a>
 </nav>
 
-<!-- HOME SECTION -->
 <section id="home" class="banner">
   <h2>Welcome to KL Study Material Center</h2>
-  <p>Find Notes, Previous Papers, Assignments & More!</p>
+  <p>All BCA Notes, Papers & Assignments in One Place</p>
 </section>
 
 <div class="container">
-  <div class="card"><h3>📘 Notes</h3><p>Study Notes</p><a href="#notes">View</a></div>
-  <div class="card"><h3>📄 Papers</h3><p>Question Papers</p><a href="#papers">View</a></div>
-  <div class="card"><h3>📝 Assignments</h3><p>College Assignments</p><a href="#assignments">View</a></div>
-  <div class="card"><h3>📬 Contact</h3><p>Need Help? Message</p><a href="#contact">View</a></div>
+  <div class="card">
+    <h3>📘 Notes</h3>
+    <p>Semester-wise Notes</p>
+    <a href="#notes">Open</a>
+  </div>
+  <div class="card">
+    <h3>📄 Papers</h3>
+    <p>Previous & Model Papers</p>
+    <a href="#papers">Open</a>
+  </div>
+  <div class="card">
+    <h3>📝 Assignments</h3>
+    <p>College Assignments</p>
+    <a href="#assignments">Open</a>
+  </div>
+  <div class="card">
+    <h3>📬 Contact</h3>
+    <p>Need Help?</p>
+    <a href="#contact">Message</a>
+  </div>
 </div>
 
 <hr>
 
-<!-- NOTES SECTION -->
 <section id="notes">
-  <h2>📘 BCA 4TH SEMESTER</h2>
-  <div class="box">Python Programming - <a href="#">View Notes</a></div>
-  <div class="box">Introduction to Machine Learning - <a href="#">View Notes</a></div>
-  <div class="box">Statistical Techniques - <a href="#">View Notes</a></div>
-  <div class="box">Human Resource Mangement - <a href="#">View Notes</a></div>
-  <div class="box">Financial Mangement - <a href="#">View Notes</a></div>
-  <div class="box">Operating Systems - <a href="#">View Notes</a></div>
-<div class="box">Web Programming  - <a href="#">View Notes</a></div>
+  <h2>📘 BCA 4th Semester Notes</h2>
+  <div class="box">Python Programming <a href="pdfs/python.pdf" download>Download</a></div>
+  <div class="box">Machine Learning <a href="pdfs/ml.pdf" download>Download</a></div>
+  <div class="box">Statistical Techniques <a href="#">Download</a></div>
+  <div class="box">HR Management <a href="#">Download</a></div>
+  <div class="box">Financial Management <a href="#">Download</a></div>
+  <div class="box">Operating Systems <a href="#">Download</a></div>
+  <div class="box">Web Programming <a href="#">Download</a></div>
 </section>
 
 <hr>
 
-<!-- PAPERS SECTION -->
 <section id="papers">
-  <h2>📄 Previous Year & Model Papers</h2>
-  <div class="box">2026 Model Papers - <a href="#">Download</a></div>
-  <div class="box">2025 Previous Papers - <a href="#">Download</a></div>
-  <div class="box">2024 Papers - <a href="#">Download</a></div>
-  <div class="box">Sample Test Papers - <a href="#">Download</a></div>
+  <h2>📄 Question Papers</h2>
+  <div class="box">2026 Model Papers <a href="#">Download</a></div>
+  <div class="box">2025 Previous Papers <a href="#">Download</a></div>
+  <div class="box">2024 Papers <a href="#">Download</a></div>
 </section>
 
 <hr>
 
-<!-- ASSIGNMENTS SECTION -->
 <section id="assignments">
   <h2>📝 Assignments</h2>
-  <div class="box">Assignment 1 - <a href="#">Download</a></div>
-  <div class="box">Assignment 2 - <a href="#">Download</a></div>
-  <div class="box">Assignment 3 - <a href="#">Download</a></div>
-  <div class="box">Assignment 4 - <a href="#">Download</a></div>
+  <div class="box">Assignment 1 <a href="#">Download</a></div>
+  <div class="box">Assignment 2 <a href="#">Download</a></div>
+  <div class="box">Assignment 3 <a href="#">Download</a></div>
 </section>
 
 <hr>
 
-<!-- CONTACT SECTION -->
 <section id="contact">
   <h2>📬 Contact Us</h2>
   <form>
-    <input type="text" placeholder="Full Name">
-    <input type="email" placeholder="Email Address">
-    <textarea placeholder="Your Message" rows="5"></textarea>
-    <button style="padding:10px 20px; background:#0048b0; color:white; border:none; border-radius:5px;">
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <textarea rows="5" placeholder="Your Message"></textarea>
+    <button style="background:#0048b0;color:white;border:none;padding:10px 20px;border-radius:6px;">
       Send Message
     </button>
   </form>
